@@ -35,7 +35,7 @@ public class controleTransferencia extends HttpServlet {
         //Recupera dados do POST
         String nroContaDestino = request.getParameter("nroContadestino");
         String nroContaOrigem = request.getParameter("nroContaorigem");
-        int valor = Integer.parseInt(request.getParameter("valor"));
+        Float valor = Float.parseFloat(request.getParameter("valor"));
         
         //recupera cliente com determinado numero de conta
         Cliente clienteO = TabelaClientes.getCliente(nroContaOrigem);
@@ -45,7 +45,7 @@ public class controleTransferencia extends HttpServlet {
         if (clienteO == null || clienteD==null){
              address = "/resultado/clienteInvalido.jsp";   
         
-        }else if (Integer.parseInt(clienteO.getSaldo()) < valor){
+        }else if (clienteO.getSaldo() < valor){
              address = "/resultado/saldoInsuficiente.jsp";   
               request.setAttribute("objCliente", clienteO);
               request.setAttribute("valor", valor);

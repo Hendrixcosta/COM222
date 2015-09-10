@@ -34,7 +34,7 @@ public class controleSaque extends HttpServlet {
         
         //Recupera dados do POST
         String nroConta = request.getParameter("nroConta");
-        int valor = Integer.parseInt(request.getParameter("valor"));
+        Float valor = Float.parseFloat(request.getParameter("valor"));
         
         //recupera cliente com determinado numero de conta
         Cliente cliente = TabelaClientes.getCliente(nroConta);
@@ -43,7 +43,7 @@ public class controleSaque extends HttpServlet {
         if (cliente == null){
              address = "/resultado/clienteInvalido.jsp";   
         
-        }else if (Integer.parseInt(cliente.getSaldo()) < valor){
+        }else if (cliente.getSaldo() < valor){
              address = "/resultado/saldoInsuficiente.jsp";
              request.setAttribute("objCliente", cliente);
              request.setAttribute("valor", valor);

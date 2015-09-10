@@ -25,7 +25,7 @@
                             <td  valign=top>
                             <b>Valor a ser transferido:</b>
                             <br>
-                            <input type="number" name="valor" ></td>
+                            <input type="text" name="valor" size="15" ></td>
                     </tr>
                     <tr>
                         <td  valign=top>

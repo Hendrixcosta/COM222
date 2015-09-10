@@ -34,7 +34,7 @@ public class controleDeposito extends HttpServlet {
         
         //Recupera dados do POST
         String nroConta = request.getParameter("nroConta");
-        int valor = Integer.parseInt(request.getParameter("valor"));
+        float valor = Float.parseFloat(request.getParameter("valor"));
         
         //recupera cliente com determinado numero de conta
         Cliente cliente = TabelaClientes.getCliente(nroConta);

@@ -43,36 +43,9 @@ public class controleCriacao extends HttpServlet {
     @Override
     protected void doGet (HttpServletRequest request, HttpServletResponse response) throws IOException{
         try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet test</title>");            
-            out.println("</head>");
-            out.println("<body>");
-
-            //out.println("<h1> Saldo do cliente13: " +  TabelaClientes.getCliente("01").getSaldo() + "</h1>");
-
-            out.println("cont == " + TabelaClientes.totalClientes() + "<br>");
-           
-            for (int i=1; i <= TabelaClientes.totalClientes(); i++){
-                
-                
-                out.println("Nome: " + TabelaClientes.getCliente(Integer.toString(i)).getNome() + " | "
-                        
-                        
-                          + "Conta: " + TabelaClientes.getCliente(Integer.toString(i)).getNroConta()+ " | "
-                          + "Saldo: "+ TabelaClientes.getCliente(Integer.toString(i)).getSaldo() + "<br>");
-            }
+            //imprimir todos os clientes do hashmap
             
-            out.println("</body>");
-            out.println("</html>");
+            out.println(TabelaClientes.listarClientes());
         }
-        
     }
-        
-    
-
-
-
 }

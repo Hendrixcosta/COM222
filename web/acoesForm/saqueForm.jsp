@@ -23,7 +23,7 @@
                             <td  valign=top>
                             <b>Valor:</b>
                             <br>
-                            <input type="number" name="valor" ></td>
+                            <input type="text" name="valor" size="15"></td>
                     </tr>
                     
                     

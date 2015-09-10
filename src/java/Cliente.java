@@ -12,9 +12,9 @@ public class Cliente {
     
     private int NroConta;
     private String Nome;
-    private String Saldo;
+    private float Saldo;
 
-    public Cliente(int NroConta, String Nome, String Saldo) {
+    public Cliente(int NroConta, String Nome, float Saldo) {
         this.NroConta = NroConta;
         this.Nome = Nome;
         this.Saldo = Saldo;
@@ -36,11 +36,11 @@ public class Cliente {
         this.Nome = Nome;
     }
 
-    public String getSaldo() {
+    public float getSaldo() {
         return Saldo;
     }
 
-    public void setSaldo(String Saldo) {
+    public void setSaldo(float Saldo) {
         this.Saldo = Saldo;
     }
     
