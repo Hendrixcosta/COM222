@@ -9,6 +9,5 @@
 <a href="\javaBank\index.jsp"> <input type="button" value="Home"></a>   
 
 <br>
-
 </body>
 </html>
