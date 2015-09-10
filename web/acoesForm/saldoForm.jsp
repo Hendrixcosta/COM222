@@ -4,43 +4,24 @@
     Author     : Hendrix
 --%>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Saldo de conta</title>
-         <LINK REL=STYLESHEET
-              HREF="./bank-support/JSP-Styles.css"
-              TYPE="text/css">
-    </head>
-    <body>
+<%@ include file="../template/header.jsp"%>
+
         <h1>Descubra seu Saldo</h1>
-        
-        
-        
-        
         
         <form action="./controleSaldo" method=post>
             
                 <table cellpadding=4 cellspacing=2 border=0>
-                    <tr>
-                        <td valign=top> 
-                            <b>Nome:</b> 
-                            <br>
-                            <input type="text" name="nome" size=15></td>
-                    </tr>
                     
                     <tr>
                             <td  valign=top>
                             <b>Numero da conta:</b>
                             <br>
-                            <input type="text" name="nroConta" size=15></td>
+                            <input type="text" name="nroConta" size=10></td>
                     </tr>
                     
                     <tr>
                         <td  valign=top>
-                        <input type="submit" value="Criar Conta">
+                        <input type="submit" value="Ver Saldo">
                         </td>
                     </tr>
                     
@@ -48,6 +29,5 @@
             
         </form>
         
-        
-    </body>
-</html>
+        <%@ include file="../template/footer.jsp"%>
+    

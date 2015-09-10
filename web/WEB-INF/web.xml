@@ -20,6 +20,18 @@
         <servlet-name>controleSaldo</servlet-name>
         <servlet-class>controleSaldo</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>controleSaque</servlet-name>
+        <servlet-class>controleSaque</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>controleDeposito</servlet-name>
+        <servlet-class>controleDeposito</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>controleTransferencia</servlet-name>
+        <servlet-class>controleTransferencia</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ShowBalance</servlet-name>
         <url-pattern>/ShowBalance</url-pattern>
@@ -39,6 +51,18 @@
     <servlet-mapping>
         <servlet-name>controleSaldo</servlet-name>
         <url-pattern>/controleSaldo</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>controleSaque</servlet-name>
+        <url-pattern>/controleSaque</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>controleDeposito</servlet-name>
+        <url-pattern>/controleDeposito</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>controleTransferencia</servlet-name>
+        <url-pattern>/controleTransferencia</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

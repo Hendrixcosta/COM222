@@ -37,7 +37,6 @@ public class controleSaldo extends HttpServlet {
         
         
         Cliente cliente = TabelaClientes.getCliente(nroCOnta);
-        
         String saldo = cliente.getSaldo();
         
         

@@ -47,6 +47,13 @@ public class operationServlet extends HttpServlet {
             }
             
             
+
+//            TabelaClientes tabela = new TabelaClientes();
+//            getServletContext().setAttribute("Clientes", tabela);
+//            getServletContext().setAttribute("key", 4);
+            
+            
+            
             RequestDispatcher dispatcher = request.getRequestDispatcher(address);
             dispatcher.forward(request, response);
             

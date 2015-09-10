@@ -28,15 +28,23 @@
                         <td valign=top> 
                             <b>Nome:</b> 
                             <br>
-                            <input type="text" name="firstName" size=15></td>
+                            <input type="text" name="nome" size=15></td>
                     </tr>
                     
                     <tr>
                             <td  valign=top>
                             <b>Saldo Inicial:</b>
                             <br>
-                            <input type="text" name="lastName" size=15></td>
+                            <input type="text" name="saldo" size=15></td>
                     </tr>
+                    
+                     <tr>
+                            <td  valign=top>
+                            <b>Numero da conta:</b>
+                            <br>
+                            <input type="text" name="nroConta" size=5></td>
+                    </tr>
+                    
                     
                     <tr>
                         <td  valign=top>
