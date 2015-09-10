@@ -1,21 +1,17 @@
 <%-- 
-    Document   : clienteInvalido
-    Created on : 09/09/2015, 21:49:46
+    Document   : exibirSaldo
+    Created on : 10/09/2015, 03:10:27
     Author     : Hendrix
 --%>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>HomeBanking</title>
-    </head>
-    <body>
-        <h1>Transferencia realizado com Sucesso!
-        <p>Seu novo Saldo Ã©: </h1>
-        <p>Voltar
-            <BR>
-            <a href="\javaBank\index2.jsp"> <input type="button" value="Home"></a>   
-    </body>
-</html>
+<%@ include file="../template/header.jsp"%>
+
+<h1>Olá, sr. ${objClienteO.getNome()}!</h1>
+    
+<h2> O Senhor transferiu da sua conta um valor de R$${valor}
+<br> e depositou na conta de ${objClienteD.getNome()}.
+
+<br><br>Saldo Atual: R$${objClienteO.getSaldo()} </h2> 
+
+
+<%@ include file="../template/footer.jsp"%>

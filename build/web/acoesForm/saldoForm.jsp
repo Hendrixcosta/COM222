@@ -6,7 +6,7 @@
 
 <%@ include file="../template/header.jsp"%>
 
-        <h1>Descubra seu Saldo</h1>
+        <h1>Consulte seu Saldo:</h1>
         
         <form action="./controleSaldo" method=post>
             
@@ -29,5 +29,5 @@
             
         </form>
         
-        <%@ include file="../template/footer.jsp"%>
-    
+<%@ include file="../template/footer.jsp"%>
+

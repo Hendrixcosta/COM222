@@ -1,21 +1,14 @@
 <%-- 
-    Document   : criarClienteErro
-    Created on : 09/09/2015, 20:05:05
+    Document   : criarClienteExito
+    Created on : 09/09/2015, 20:06:28
     Author     : Hendrix
 --%>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>HomeBanking</title>
-    </head>
-    <body>
-        <h1>Erro ao Criar novo CLiente
-        <p>Usuario ou numero de conta invÃ¡lido</h1>
-        <p>Tente novamente
-            <BR>
-            <a href="\javaBank\index2.jsp"> <input type="button" value="Home"></a>   
-    </body>
-</html>
+ <%@ include file="../template/header.jsp"%>
+        <h1> Erro ao criar conta. </h1> <br>
+        
+        <h2> O Sr. ${objCliente.getNome()}, ja possui uma conta cadastrada conosco, <br>
+        com  o número: ${objCliente.getNroConta()} <br>
+        <h2> E o seu saldo é de : R$ ${objCliente.getSaldo()} <br>
+            
+<%@ include file="../template/footer.jsp"%>

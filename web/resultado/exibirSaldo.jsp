@@ -6,10 +6,8 @@
 
 <%@ include file="../template/header.jsp"%>
 
-<h1>Olá, sr. ${objCliente.getNome()}!</h1>
-    
-<h2> O Senhor realizou um saque de R$${valor}
-<br> Saldo Atual: R$${objCliente.getSaldo()} </h2> 
+<h1>Olá, sr. ${objCliente.getNome()},
+<br>Seu saldo é: R$${objCliente.getSaldo()} </h1>
 
 
 <%@ include file="../template/footer.jsp"%>

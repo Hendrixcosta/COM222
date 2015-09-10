@@ -4,21 +4,9 @@
     Author     : Hendrix
 --%>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>HomeBanking</title>
-    </head>
-    <body>
-        <h1>Exito Ao criar Cliente
-        
+ <%@ include file="../template/header.jsp"%>
+        <h1> Seja bem vindo, Sr. ${objCliente.getNome()} ! </h1> <br>
+        <h2> O número da sua conta é: ${objCliente.getNroConta()} <br>
+        <h2> E o seu saldo inicial é: R$ ${objCliente.getSaldo()} <br>
             
-            
-            
-            
-            
-            <a href="\javaBank"> <input type="button" value="Home"></a>   
-    </body>
-</html>
+<%@ include file="../template/footer.jsp"%>

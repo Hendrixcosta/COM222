@@ -29,7 +29,7 @@ public class controleSaque extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
-        PrintWriter out = response.getWriter();
+        
         String address = "";
         
         //Recupera dados do POST
@@ -44,11 +44,15 @@ public class controleSaque extends HttpServlet {
              address = "/resultado/clienteInvalido.jsp";   
         
         }else if (Integer.parseInt(cliente.getSaldo()) < valor){
-             address = "/resultado/saldoInsuficiente.jsp";   
+             address = "/resultado/saldoInsuficiente.jsp";
+             request.setAttribute("objCliente", cliente);
+             request.setAttribute("valor", valor);
         }else{
             if (TabelaClientes.saque(nroConta, valor)){
                 System.out.println("Saque efetuado");
             }
+            request.setAttribute("objCliente", cliente);
+            request.setAttribute("valor", valor);
             address = "/resultado/saqueRealizado.jsp";   
         }
         

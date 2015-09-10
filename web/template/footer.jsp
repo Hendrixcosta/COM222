@@ -5,9 +5,9 @@
 --%>
 
 
-
-<a href="\javaBank\index2.jsp"> <input type="button" value="Home"></a>   
 </fieldset>
+<a href="\javaBank\index.jsp"> <input type="button" value="Home"></a>   
+
 <br>
 
 </body>

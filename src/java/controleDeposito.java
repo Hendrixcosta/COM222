@@ -29,7 +29,7 @@ public class controleDeposito extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
-        PrintWriter out = response.getWriter();
+        
         String address = "";
         
         //Recupera dados do POST
@@ -47,7 +47,9 @@ public class controleDeposito extends HttpServlet {
             if (TabelaClientes.deposito(nroConta, valor)){
                 System.out.println("Deposito efetuado efetuado");
             }
-            address = "/resultado/saqueRealizado.jsp";   
+            request.setAttribute("objCliente", cliente);
+            request.setAttribute("valor", valor);
+            address = "/resultado/depositoRealizado.jsp";   
         }
         
         

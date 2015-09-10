@@ -29,7 +29,7 @@ public class controleTransferencia extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
-        PrintWriter out = response.getWriter();
+        
         String address = "";
         
         //Recupera dados do POST
@@ -47,10 +47,15 @@ public class controleTransferencia extends HttpServlet {
         
         }else if (Integer.parseInt(clienteO.getSaldo()) < valor){
              address = "/resultado/saldoInsuficiente.jsp";   
+              request.setAttribute("objCliente", clienteO);
+              request.setAttribute("valor", valor);
         }else{
             if ( (TabelaClientes.saque(nroContaOrigem, valor)) &&  (TabelaClientes.deposito(nroContaDestino, valor)) ){
                 System.out.println("Transferencia realizada com Sucesso");
             }
+            request.setAttribute("objClienteO", clienteO);
+            request.setAttribute("objClienteD", clienteD);
+            request.setAttribute("valor", valor);
             address = "/resultado/transferenciaRealizada.jsp";   
         }
         

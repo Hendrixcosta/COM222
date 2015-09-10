@@ -16,4 +16,4 @@
     </head>
     <body>
         <fieldset>
-            <legend>Home Banking</legend>
+            <legend><h2>Home Banking</h2></legend>

@@ -9,11 +9,21 @@
     </HEAD>
     <BODY>
         <fieldset>
-            <legend>Saldo bancário</legend>
-            <form action="./ShowBalance">
-                ID do Cliente: <input type="text" name="id"><br>
-                <input type="submit" value="Mostra saldo">
+            <legend><h2>Home Banking</h2></legend>
+            
+            <form action="./operationServlet">
+               <b>Qual ação deseja realizar no seu HomeBanking?</b>
+                            <br>
+                            <br><input type="radio" name="acao" value="criacao" checked>Criação de conta com Saldo Inicial
+                            <br><input type="radio" name="acao" value="saque">Saques
+                            <br><input type="radio" name="acao" value="deposito">Depositos
+                            <br><input type="radio" name="acao" value="transferencia">Transferências
+                            <br><input type="radio" name="acao" value="saldo">Saldo
+                            <br><br>
+                            
+                <input type="submit" value="  Next!  ">
             </form>
+            
         </fieldset>
         <br>
     </BODY></HTML>
